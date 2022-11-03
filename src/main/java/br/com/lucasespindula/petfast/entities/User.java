@@ -25,7 +25,7 @@ public class User {
     @Column(nullable = false)
     private String username; //NOME
 
-    @Column(nullable = false)git a
+    @Column(nullable = false)
     private String email; //EMAIL
 
     @Column(nullable = false)
