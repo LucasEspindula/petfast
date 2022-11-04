@@ -1,6 +1,6 @@
 package br.com.lucasespindula.petfast.controllers.impl;
 
-import br.com.lucasespindula.petfast.service.dto.UserDTO;
+import br.com.lucasespindula.petfast.service.dto.ClientDTO;
 import br.com.lucasespindula.petfast.service.impl.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +17,8 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void registerUser(@RequestBody UserDTO userDTO) {
-        userService.registerUser(userDTO);
+    public void registerUser(@RequestBody ClientDTO clientDTO) {
+        userService.registerUser(clientDTO);
     }
 
 //    @PostMapping("/signup")

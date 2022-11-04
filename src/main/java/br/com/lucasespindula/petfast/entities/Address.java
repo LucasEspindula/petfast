@@ -6,21 +6,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
 @Getter
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
-    @OneToOne(mappedBy = "address")
-    private User user; //usuario
-
-    @Column(nullable = false)
+    @Column(nullable = false, length = 8) //EX DE TAMANHO -> 12345-678
     private String zipCode; //CEP
 
     @Column(nullable = false)
@@ -38,5 +30,6 @@ public class Address {
     @Column(nullable = false)
     private String number; //NUMERO
 
+    @Column(length = 100)
     private String complement; //COMPLEMENTO
 }

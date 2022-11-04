@@ -1,7 +1,7 @@
 package br.com.lucasespindula.petfast.service.impl;
 
 import br.com.lucasespindula.petfast.repository.UserRepository;
-import br.com.lucasespindula.petfast.service.dto.UserDTO;
+import br.com.lucasespindula.petfast.service.dto.ClientDTO;
 import org.springframework.stereotype.Service;
 
 import static br.com.lucasespindula.petfast.converter.UserConverter.dtoToEntity;
@@ -15,7 +15,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void registerUser(UserDTO userDTO) {
-        userRepository.save(dtoToEntity(userDTO));
+    public void registerUser(ClientDTO clientDTO) {
+        userRepository.save(dtoToEntity(clientDTO));
     }
 }

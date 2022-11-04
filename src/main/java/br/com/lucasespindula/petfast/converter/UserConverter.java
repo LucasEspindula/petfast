@@ -1,17 +1,23 @@
 package br.com.lucasespindula.petfast.converter;
 
-import br.com.lucasespindula.petfast.entities.User;
-import br.com.lucasespindula.petfast.service.dto.UserDTO;
+import br.com.lucasespindula.petfast.entities.Address;
+import br.com.lucasespindula.petfast.entities.Client;
+import br.com.lucasespindula.petfast.service.dto.ClientDTO;
 
 public class UserConverter {
 
-    public static User dtoToEntity(UserDTO userDTO) {
-        return new User(
-                null,
-                userDTO.getUsername(),
-                userDTO.getEmail(),
-                userDTO.getPassword()
-//                userDTO.getRoles()
-        );
+    public static Client dtoToEntity(ClientDTO clientDTO) {
+//        Address test = new Address()
+        return null;
+
+//                new Client(
+//                null,
+//                clientDTO.getUsername(),
+//                clientDTO.getPassword(),
+//                clientDTO.getCpf(),
+//                clientDTO.getEmail(),
+//                clientDTO.getCreationDate()
+//                );
     }
 }
+

@@ -5,35 +5,35 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.util.Date;
 
-@Entity
 @Getter
+@MappedSuperclass
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
-    private Address address; //ENDEREÇO
+    @Valid
+    @Column(nullable = false)
+    protected Address address; //ENDEREÇO
+
+    @Valid
+    @Column(nullable = false)
+    protected Contact contact; //CONTATO
 
     @Column(nullable = false)
-    private String username; //NOME
+    protected String name; //NOME
 
     @Column(nullable = false)
-    private String email; //EMAIL
+    protected String password; //SENHA
 
     @Column(nullable = false)
-    private String password; //SENHA
-
-    @Column(nullable = false)
-    private TypeUser typeUser; //TIPO DE USUARIO
-
-    @Column(nullable = false)
-    private Date creationDate; //DATA DE CRIAÇÃO DA CONTA
+    protected Date creationDate; //DATA DE CRIAÇÃO DA CONTA
 }
