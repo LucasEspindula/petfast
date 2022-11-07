@@ -3,37 +3,36 @@ package br.com.lucasespindula.petfast.service.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.Date;
 
 @Component
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClientDTO {
-
-    @CPF
-    @NotBlank
-    @Size(max = 11)
-    private String Cpf;
+public class AddressDTO {
 
     @NotBlank
-    private ContactDTO contactDTO;
+    @Size(max = 8) //EX DE TAMANHO -> 12345-678
+    private String zipCode; //CEP
 
     @NotBlank
-    private AddressDTO addressDTO;
+    private String road; //RUA
 
     @NotBlank
-    private String username;
+    private String district; //BAIRRO
 
     @NotBlank
-    @Size(min = 8)
-    private String password;
+    private String city; //CIDADE
 
     @NotBlank
-    private Date creationDate;
+    private String state; //ESTADO
+
+    @NotBlank
+    private String number; //NUMERO
+
+    @Size(max = 100)
+    private String complement; //COMPLEMENTO
 }
