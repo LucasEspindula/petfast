@@ -2,23 +2,24 @@ package br.com.lucasespindula.petfast.entities;
 
 import lombok.Builder;
 import lombok.Getter;
-import org.hibernate.validator.constraints.br.CNPJ;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.validation.Valid;
 import java.util.Date;
 
 @Entity
 @Getter
+@NoArgsConstructor
 public class Petshop extends User {
 
-    @CNPJ
     @Column(nullable = false, unique = true, length = 14) //EX DE TAMANHO -> 12345678900000
-    private final String Cnpj; //CNPJ
+    private String Cnpj; //CNPJ
 
     @Builder
-    public Petshop(Long id, @Valid Address address, @Valid Contact contact, String name, String password,
-                   Date creationDate, String cnpj) {
+    public Petshop(Long id, String cnpj, String name, String password, Date creationDate,
+                   @Valid Contact contact, @Valid Address address) {
         super(id, address, contact, name, password, creationDate);
         Cnpj = cnpj;
     }

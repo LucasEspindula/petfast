@@ -1,19 +1,19 @@
-#server:
-#  servlet:
-#    context-path: /petfast/api/
-#  port: 8089
-#
-#spring:
-#  jpa:
-#    hibernate.ddl-auto: update
-#    generate-ddl: true
-#    show-sql: true
-#  datasource:
-#    driverClassName: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://127.0.0.1:3306/petfast?createDatabaseIfNotExist=true
-#    username: root
-#    password: 12345
-#
-##jwtCookieName: petfast
-##jwtSecret: petfastSecretKey
-##jwtExpirationMs: 86400000
+server:
+  servlet:
+    context-path: /petfast/api/
+  port: 8089
+
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/petfast?createDatabaseIfNotExist=true
+    username: root
+    password: 12345
+
+#jwtCookieName: petfast
+#jwtSecret: petfastSecretKey
+#jwtExpirationMs: 86400000
