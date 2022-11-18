@@ -18,10 +18,15 @@ public class Item {
     private Long id;
 
     @Column(nullable = false)
+    private Integer amount;
+
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "idProduct")
     private Product product;
 
-    @Column(nullable = false)
-    private Integer amount;
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "idPetshop")
+    private Petshop petshop;
 
     @ManyToOne
     @JoinColumn(nullable = false, name = "idOrder")

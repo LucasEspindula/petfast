@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity
+@Entity(name = "Order_")
 @Getter
 @AllArgsConstructor
 public class Order {
@@ -17,14 +17,9 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "idClient")
     private Client client;
-
-    @Column(nullable = false)
-    private Petshop petshop;
-
-    @Column(nullable = false)
-    private Product product;
 
     @Column(nullable = false)
     private LocalDateTime purchaseDate;

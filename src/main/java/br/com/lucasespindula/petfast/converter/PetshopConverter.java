@@ -3,7 +3,7 @@ package br.com.lucasespindula.petfast.converter;
 import br.com.lucasespindula.petfast.entities.Address;
 import br.com.lucasespindula.petfast.entities.Contact;
 import br.com.lucasespindula.petfast.entities.Petshop;
-import br.com.lucasespindula.petfast.service.dto.PetshopDTO;
+import service.dto.PetshopDTO;
 
 public class PetshopConverter {
     public static Petshop dtoToEntity(PetshopDTO petshopDTO) {

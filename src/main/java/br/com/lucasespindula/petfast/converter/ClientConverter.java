@@ -3,7 +3,7 @@ package br.com.lucasespindula.petfast.converter;
 import br.com.lucasespindula.petfast.entities.Address;
 import br.com.lucasespindula.petfast.entities.Client;
 import br.com.lucasespindula.petfast.entities.Contact;
-import br.com.lucasespindula.petfast.service.dto.ClientDTO;
+import service.dto.ClientDTO;
 
 public class ClientConverter {
 
