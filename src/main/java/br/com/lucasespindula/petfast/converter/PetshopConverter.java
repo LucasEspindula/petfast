@@ -5,19 +5,20 @@ import br.com.lucasespindula.petfast.entities.Contact;
 import br.com.lucasespindula.petfast.entities.Petshop;
 import br.com.lucasespindula.petfast.service.dto.PetshopDTO;
 
+import java.time.LocalDateTime;
+
 public class PetshopConverter {
     public static Petshop dtoToEntity(PetshopDTO petshopDTO) {
-        return new Petshop(
-                null,
-                petshopDTO.getCnpj(),
-                petshopDTO.getUsername(),
-                petshopDTO.getPassword(),
-                petshopDTO.getCreationDate(),
-                new Contact(
+        return Petshop.builder()
+                .cnpj(petshopDTO.getCnpj())
+                .name(petshopDTO.getUsername())
+                .password(petshopDTO.getPassword())
+                .creationDate(LocalDateTime.now())
+                .contact(new Contact(
                         petshopDTO.getContactDTO().getEmail(),
                         petshopDTO.getContactDTO().getTelephone()
-                ),
-                new Address(
+                ))
+                .address(new Address(
                         petshopDTO.getAddressDTO().getZipCode(),
                         petshopDTO.getAddressDTO().getRoad(),
                         petshopDTO.getAddressDTO().getDistrict(),
@@ -25,7 +26,7 @@ public class PetshopConverter {
                         petshopDTO.getAddressDTO().getState(),
                         petshopDTO.getAddressDTO().getNumber(),
                         petshopDTO.getAddressDTO().getComplement()
-                )
-        );
+                ))
+                .build();
     }
 }

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.Valid;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -18,7 +18,7 @@ public class Client extends User {
     private String Cpf; //CPF
 
     @Builder
-    public Client(Long id, String cpf, String name, String password, Date creationDate,
+    public Client(Long id, String cpf, String name, String password, LocalDateTime creationDate,
                   @Valid Contact contact, @Valid Address address) {
         super(id, address, contact, name, password, creationDate);
         Cpf = cpf;

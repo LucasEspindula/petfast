@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.Date;
 
 @Component
 @Getter
@@ -33,7 +32,4 @@ public class PetshopDTO {
     @NotBlank
     @Size(min = 8)
     private String password;
-
-    @NotBlank
-    private Date creationDate;
 }
