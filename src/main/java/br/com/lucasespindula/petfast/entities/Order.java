@@ -2,6 +2,7 @@ package br.com.lucasespindula.petfast.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;

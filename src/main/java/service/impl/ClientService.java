@@ -1,7 +1,7 @@
-package br.com.lucasespindula.petfast.service.impl;
+package service.impl;
 
 import br.com.lucasespindula.petfast.repository.ClientRepository;
-import br.com.lucasespindula.petfast.service.dto.ClientDTO;
+import service.dto.ClientDTO;
 import org.springframework.stereotype.Service;
 
 import static br.com.lucasespindula.petfast.converter.ClientConverter.dtoToEntity;

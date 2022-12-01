@@ -1,7 +1,7 @@
 package br.com.lucasespindula.petfast.controllers.impl;
 
-import br.com.lucasespindula.petfast.service.dto.ClientDTO;
-import br.com.lucasespindula.petfast.service.impl.ClientService;
+import service.dto.ClientDTO;
+import service.impl.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

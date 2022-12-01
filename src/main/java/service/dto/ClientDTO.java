@@ -1,4 +1,4 @@
-package br.com.lucasespindula.petfast.service.dto;
+package service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
