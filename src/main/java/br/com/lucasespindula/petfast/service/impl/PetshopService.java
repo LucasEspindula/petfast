@@ -1,10 +1,10 @@
-package service.impl;
+package br.com.lucasespindula.petfast.service.impl;
 
 import br.com.lucasespindula.petfast.repository.PetshopRepository;
-import service.dto.PetshopDTO;
+import br.com.lucasespindula.petfast.service.dto.PetshopDTO;
 import org.springframework.stereotype.Service;
 
-import static br.com.lucasespindula.petfast.converter.PetshopConverter.dtoToEntity;
+import static br.com.lucasespindula.petfast.converter.PetshopConverter.petshopDtoToEntity;
 
 @Service
 public class PetshopService {
@@ -16,6 +16,6 @@ public class PetshopService {
     }
 
     public void registerUser(PetshopDTO petshopDTO) {
-        petshopRepository.save(dtoToEntity(petshopDTO));
+        petshopRepository.save(petshopDtoToEntity(petshopDTO));
     }
 }

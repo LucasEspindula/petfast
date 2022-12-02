@@ -1,4 +1,4 @@
-package service.dto;
+package br.com.lucasespindula.petfast.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@Component
 @Getter
+@Component
 @NoArgsConstructor
 @AllArgsConstructor
 public class ContactDTO {

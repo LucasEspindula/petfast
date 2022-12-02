@@ -1,32 +1,22 @@
 package br.com.lucasespindula.petfast.converter;
 
-import br.com.lucasespindula.petfast.entities.Address;
-import br.com.lucasespindula.petfast.entities.Contact;
 import br.com.lucasespindula.petfast.entities.Petshop;
-import service.dto.PetshopDTO;
+import br.com.lucasespindula.petfast.service.dto.PetshopDTO;
 
 import java.time.LocalDateTime;
 
+import static br.com.lucasespindula.petfast.converter.AddressConverter.addressDtoToEntity;
+import static br.com.lucasespindula.petfast.converter.ContactConverter.contactDtoToEntity;
+
 public class PetshopConverter {
-    public static Petshop dtoToEntity(PetshopDTO petshopDTO) {
+    public static Petshop petshopDtoToEntity(PetshopDTO petshopDTO) {
         return Petshop.builder()
                 .cnpj(petshopDTO.getCnpj())
                 .name(petshopDTO.getUsername())
                 .password(petshopDTO.getPassword())
                 .creationDate(LocalDateTime.now())
-                .contact(new Contact(
-                        petshopDTO.getContactDTO().getEmail(),
-                        petshopDTO.getContactDTO().getTelephone()
-                ))
-                .address(new Address(
-                        petshopDTO.getAddressDTO().getZipCode(),
-                        petshopDTO.getAddressDTO().getRoad(),
-                        petshopDTO.getAddressDTO().getDistrict(),
-                        petshopDTO.getAddressDTO().getCity(),
-                        petshopDTO.getAddressDTO().getState(),
-                        petshopDTO.getAddressDTO().getNumber(),
-                        petshopDTO.getAddressDTO().getComplement()
-                ))
+                .contact(contactDtoToEntity(petshopDTO.getContactDTO()))
+                .address(addressDtoToEntity(petshopDTO.getAddressDTO()))
                 .build();
     }
 }

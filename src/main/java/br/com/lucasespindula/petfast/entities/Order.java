@@ -1,6 +1,7 @@
 package br.com.lucasespindula.petfast.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 import lombok.NoArgsConstructor;
@@ -11,8 +12,9 @@ import java.util.List;
 
 @Entity(name = "Order_")
 @Getter
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Order {
 
     @Id
