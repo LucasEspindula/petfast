@@ -21,6 +21,6 @@ public class Petshop extends User {
     public Petshop(Long id, String cnpj, String name, String password, LocalDateTime creationDate,
                    @Valid Contact contact, @Valid Address address) {
         super(id, address, contact, name, password, creationDate);
-        cnpj = cnpj;
+        this.cnpj = cnpj;
     }
 }

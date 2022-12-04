@@ -15,8 +15,6 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 public class PetshopDTO {
 
-    @CNPJ
-    @NotBlank
     @Size(max = 14)
     private String cnpj;
 

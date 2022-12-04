@@ -17,3 +17,5 @@ spring:
 #jwtCookieName: petfast
 #jwtSecret: petfastSecretKey
 #jwtExpirationMs: 86400000
+
+#http://localhost:8089/petfast/api/swagger-ui/index.html -- swagger ui

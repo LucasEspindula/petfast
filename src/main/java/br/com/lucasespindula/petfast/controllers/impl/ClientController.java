@@ -18,6 +18,6 @@ public class ClientController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void registerClient(@RequestBody ClientDTO clientDTO) {
-        clientService.registerUser(clientDTO);
+        clientService.registerUserClient(clientDTO);
     }
 }

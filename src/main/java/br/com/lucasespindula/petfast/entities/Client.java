@@ -19,8 +19,8 @@ public class Client extends User {
 
     @Builder
     public Client(Long id, String cpf, String name, String password, LocalDateTime creationDate,
-                  @Valid Contact contact, @Valid Address address) {
+                  @Valid Contact contact, @Valid Address address, String test) {
         super(id, address, contact, name, password, creationDate);
-        cpf = cpf;
+        this.cpf = cpf;
     }
 }

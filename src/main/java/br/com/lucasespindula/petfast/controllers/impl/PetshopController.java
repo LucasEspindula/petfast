@@ -18,6 +18,6 @@ public class PetshopController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void registerPetshop(@RequestBody PetshopDTO petshopDTO) {
-        petshopService.registerUser(petshopDTO);
+        petshopService.registerUserPetshop(petshopDTO);
     }
 }

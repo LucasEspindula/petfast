@@ -15,7 +15,7 @@ public class PetshopService {
         this.petshopRepository = petshopRepository;
     }
 
-    public void registerUser(PetshopDTO petshopDTO) {
+    public void registerUserPetshop(PetshopDTO petshopDTO) {
         petshopRepository.save(petshopDtoToEntity(petshopDTO));
     }
 }

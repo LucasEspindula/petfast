@@ -1,6 +1,5 @@
 package br.com.lucasespindula.petfast.service.dto;
 
-import br.com.lucasespindula.petfast.entities.Order;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +21,4 @@ public class ItemDTO {
 
     @NotBlank
     private PetshopDTO petshopDTO;
-
-    @NotBlank
-    private Order order;
 }

@@ -15,7 +15,7 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
-    public void registerUser(ClientDTO clientDTO) {
+    public void registerUserClient(ClientDTO clientDTO) {
         clientRepository.save(clientDtoToEntity(clientDTO));
     }
 }

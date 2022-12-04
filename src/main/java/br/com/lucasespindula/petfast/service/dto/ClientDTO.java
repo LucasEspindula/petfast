@@ -18,7 +18,7 @@ public class ClientDTO {
     @CPF
     @NotBlank
     @Size(max = 11) //EX DE TAMANHO -> 12345678900
-    private String Cpf;
+    private String cpf;
 
     @NotBlank
     private ContactDTO contactDTO;
