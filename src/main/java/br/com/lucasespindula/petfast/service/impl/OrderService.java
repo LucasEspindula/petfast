@@ -4,7 +4,7 @@ import br.com.lucasespindula.petfast.repository.OrderRepository;
 import br.com.lucasespindula.petfast.service.dto.OrderDTO;
 import org.springframework.stereotype.Service;
 
-import static br.com.lucasespindula.petfast.converter.OrderConverter.OrderDtoToEntity;
+import static br.com.lucasespindula.petfast.converter.OrderConverter.orderDtoToEntity;
 
 @Service
 public class OrderService {
@@ -16,6 +16,6 @@ public class OrderService {
     }
 
     public void registerOrder(OrderDTO orderDTO) {
-        orderRepository.save(OrderDtoToEntity(orderDTO));
+        orderRepository.save(orderDtoToEntity(orderDTO));
     }
 }

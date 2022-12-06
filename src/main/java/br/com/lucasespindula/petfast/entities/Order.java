@@ -29,6 +29,6 @@ public class Order {
     @Column(nullable = false)
     private LocalDateTime purchaseDate;
 
-    @OneToMany(cascade = {CascadeType.ALL},  mappedBy = "order")
+    @OneToMany(cascade = CascadeType.ALL,  mappedBy = "order")
     private List<Item> items;
 }

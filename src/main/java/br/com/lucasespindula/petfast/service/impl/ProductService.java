@@ -1,8 +1,11 @@
 package br.com.lucasespindula.petfast.service.impl;
 
+import br.com.lucasespindula.petfast.converter.ProductConverter;
 import br.com.lucasespindula.petfast.repository.ProductRepository;
 import br.com.lucasespindula.petfast.service.dto.ProductDTO;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 import static br.com.lucasespindula.petfast.converter.ProductConverter.productDtoToEntity;
 
@@ -17,5 +20,11 @@ public class ProductService {
 
     public void registerProduct(ProductDTO productDTO) {
         productRepository.save(productDtoToEntity(productDTO));
+    }
+
+    public List<ProductDTO> findAllProducts() {
+        return productRepository.findAll().stream()
+                .map(ProductConverter::productEntityToDto)
+                .toList();
     }
 }

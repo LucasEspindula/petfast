@@ -7,7 +7,7 @@ import static br.com.lucasespindula.petfast.converter.ClientConverter.clientDtoT
 
 public class OrderConverter {
 
-    public static Order OrderDtoToEntity(OrderDTO orderDTO) {
+    public static Order orderDtoToEntity(OrderDTO orderDTO) {
         return Order.builder()
                 .items(orderDTO.getItemsDTO().stream()
                         .map(ItemConverter::itemDtoToEntity)

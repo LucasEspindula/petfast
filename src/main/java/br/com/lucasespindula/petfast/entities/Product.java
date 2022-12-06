@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Entity
@@ -31,4 +32,7 @@ public class Product {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private TypeProduct typeProduct;
+
+    @Column(nullable = false)
+    protected LocalDateTime creationDate;
 }

@@ -22,16 +22,16 @@ public class Item {
     @Column(nullable = false)
     private Integer amount;
 
-    @ManyToOne
-    @JoinColumn(nullable = false, name = "idProduct")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idProduct", nullable = false)
     private Product product;
 
-    @ManyToOne
-    @JoinColumn(nullable = false, name = "idPetshop")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idPetshop", nullable = false)
     private Petshop petshop;
 
-    @ManyToOne
-    @JoinColumn(nullable = false, name = "idOrder")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idOrder", nullable = false)
     private Order order;
 
     @Builder
