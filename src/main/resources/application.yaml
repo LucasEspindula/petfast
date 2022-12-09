@@ -12,7 +12,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/petfast?createDatabaseIfNotExist=true
     username: root
-    password: 12345
+    password: 1234
 
 #jwtCookieName: petfast
 #jwtSecret: petfastSecretKey

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "Order_")
@@ -30,5 +31,5 @@ public class Order {
     private LocalDateTime purchaseDate;
 
     @OneToMany(cascade = CascadeType.ALL,  mappedBy = "order")
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
 }

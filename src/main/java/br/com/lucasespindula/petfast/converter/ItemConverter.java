@@ -1,18 +1,19 @@
 package br.com.lucasespindula.petfast.converter;
 
 import br.com.lucasespindula.petfast.entities.Item;
+import br.com.lucasespindula.petfast.entities.Order;
+import br.com.lucasespindula.petfast.repository.PetshopRepository;
+import br.com.lucasespindula.petfast.repository.ProductRepository;
 import br.com.lucasespindula.petfast.service.dto.ItemDTO;
-
-import static br.com.lucasespindula.petfast.converter.PetshopConverter.petshopDtoToEntity;
-import static br.com.lucasespindula.petfast.converter.ProductConverter.productDtoToEntity;
 
 public class ItemConverter {
 
-    public static Item itemDtoToEntity(ItemDTO itemDTO) {
+    public static Item itemDtoToEntity(Order order, ItemDTO itemDTO, ProductRepository productRepository, PetshopRepository petshopRepository) {
         return Item.builder()
+                .order(order)
                 .amount(itemDTO.getAmount())
-                .petshop(petshopDtoToEntity(itemDTO.getPetshopDTO()))
-                .product(productDtoToEntity(itemDTO.getProductDTO()))
+                .petshop(petshopRepository.getReferenceById(itemDTO.getPetshopId()))
+                .product(productRepository.getReferenceById(itemDTO.getProductId()))
                 .build();
     }
 }

@@ -16,10 +16,7 @@ import java.util.List;
 public class OrderDTO {
 
     @NotBlank
-    private ClientDTO clientDTO;
-
-    @NotBlank
-    private LocalDateTime purchaseDate;
+    private Long clientId;
 
     @NotBlank
     private List<ItemDTO> itemsDTO;

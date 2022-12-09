@@ -17,8 +17,8 @@ public class ItemDTO {
     private Integer amount;
 
     @NotBlank
-    private ProductDTO productDTO;
+    private Long productId;
 
     @NotBlank
-    private PetshopDTO petshopDTO;
+    private Long petshopId;
 }
