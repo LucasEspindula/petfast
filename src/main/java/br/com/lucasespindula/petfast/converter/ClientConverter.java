@@ -16,8 +16,8 @@ public class ClientConverter {
                 .name(clientDTO.getUsername())
                 .password(clientDTO.getPassword())
                 .creationDate(LocalDateTime.now())
-                .contact(contactDtoToEntity(clientDTO.getContactDTO()))
-                .address(addressDtoToEntity(clientDTO.getAddressDTO()))
+                .contact(contactDtoToEntity(clientDTO.getContact()))
+                .address(addressDtoToEntity(clientDTO.getAddress()))
                 .build();
     }
 }

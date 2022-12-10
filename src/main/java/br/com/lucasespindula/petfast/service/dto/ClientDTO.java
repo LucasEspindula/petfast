@@ -21,10 +21,10 @@ public class ClientDTO {
     private String cpf;
 
     @NotBlank
-    private ContactDTO contactDTO;
+    private ContactDTO contact;
 
     @NotBlank
-    private AddressDTO addressDTO;
+    private AddressDTO address;
 
     @NotBlank
     private String username;

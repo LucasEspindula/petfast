@@ -20,10 +20,10 @@ public class PetshopDTO {
     private String cnpj;
 
     @NotBlank
-    private ContactDTO contactDTO;
+    private ContactDTO contact;
 
     @NotBlank
-    private AddressDTO addressDTO;
+    private AddressDTO address;
 
     @NotBlank
     private String username;

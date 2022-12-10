@@ -15,8 +15,8 @@ public class PetshopConverter {
                 .name(petshopDTO.getUsername())
                 .password(petshopDTO.getPassword())
                 .creationDate(LocalDateTime.now())
-                .contact(contactDtoToEntity(petshopDTO.getContactDTO()))
-                .address(addressDtoToEntity(petshopDTO.getAddressDTO()))
+                .contact(contactDtoToEntity(petshopDTO.getContact()))
+                .address(addressDtoToEntity(petshopDTO.getAddress()))
                 .build();
     }
 }
