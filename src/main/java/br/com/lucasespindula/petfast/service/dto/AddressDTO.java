@@ -15,24 +15,23 @@ import javax.validation.constraints.Size;
 public class AddressDTO {
 
     @NotBlank
-    @Size(max = 8) //EX DE TAMANHO -> 12345-678
-    private String zipCode; //CEP
+    @Size(max = 8)
+    private String zipCode;
 
     @NotBlank
-    private String road; //RUA
+    private String road;
 
     @NotBlank
-    private String district; //BAIRRO
+    private String district;
 
     @NotBlank
-    private String city; //CIDADE
+    private String city;
 
     @NotBlank
-    private String state; //ESTADO
+    private String state;
 
     @NotBlank
-    private String number; //NUMERO
-
+    private String number;
     @Size(max = 100)
-    private String complement; //COMPLEMENTO
+    private String complement;
 }

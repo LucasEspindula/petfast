@@ -22,18 +22,18 @@ public abstract class User {
 
     @Valid
     @Column(nullable = false)
-    protected Address address; //ENDEREÇO
+    protected Address address;
 
     @Valid
     @Column(nullable = false)
-    protected Contact contact; //CONTATO
+    protected Contact contact;
 
     @Column(nullable = false)
-    protected String name; //NOME
+    protected String name;
 
     @Column(nullable = false)
-    protected String password; //SENHA
+    protected String password;
 
     @Column(nullable = false)
-    protected LocalDateTime creationDate; //DATA DE CRIAÇÃO DA CONTA
+    protected LocalDateTime creationDate;
 }

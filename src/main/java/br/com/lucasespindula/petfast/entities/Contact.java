@@ -15,8 +15,8 @@ import javax.persistence.*;
 public class Contact {
 
     @Column(nullable = false, unique = true)
-    private String email; //E-MAIL
+    private String email;
 
-    @Column(nullable = false, length = 13) //EX DE TAMANHO -> +5551 9 12345678
-    private String telephone; //TELEFONE
+    @Column(nullable = false, length = 13)
+    private String telephone;
 }

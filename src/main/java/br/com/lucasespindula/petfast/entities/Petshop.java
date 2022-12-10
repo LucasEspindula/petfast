@@ -14,8 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Petshop extends User {
 
-    @Column(nullable = false, unique = true, length = 14) //EX DE TAMANHO -> 12345678900000
-    private String cnpj; //CNPJ
+    @Column(nullable = false, unique = true, length = 14)
+    private String cnpj;
 
     @Builder
     public Petshop(Long id, String cnpj, String name, String password, LocalDateTime creationDate,

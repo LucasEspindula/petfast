@@ -14,24 +14,24 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Address {
 
-    @Column(nullable = false, length = 8) //EX DE TAMANHO -> 12345-678
-    private String zipCode; //CEP
+    @Column(nullable = false, length = 8)
+    private String zipCode;
 
     @Column(nullable = false)
-    private String road; //RUA
+    private String road;
 
     @Column(nullable = false)
-    private String district; //BAIRRO
+    private String district;
 
     @Column(nullable = false)
-    private String city; //CIDADE
+    private String city;
 
     @Column(nullable = false)
-    private String state; //ESTADO
+    private String state;
 
     @Column(nullable = false)
-    private String number; //NUMERO
+    private String number;
 
     @Column(length = 100)
-    private String complement; //COMPLEMENTO
+    private String complement;
 }

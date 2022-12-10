@@ -12,6 +12,7 @@ public class ItemConverter {
         return Item.builder()
                 .order(order)
                 .amount(itemDTO.getAmount())
+                .valueItems(productRepository.getReferenceById(itemDTO.getProductId()).getValue() * itemDTO.getAmount())
                 .petshop(petshopRepository.getReferenceById(itemDTO.getPetshopId()))
                 .product(productRepository.getReferenceById(itemDTO.getProductId()))
                 .build();

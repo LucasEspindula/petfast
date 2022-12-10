@@ -17,9 +17,9 @@ public class ContactDTO {
 
     @Email
     @NotBlank
-    private String email; //E-MAIL
+    private String email;
 
     @NotBlank
-    @Size(max = 13) //EX DE TAMANHO -> +5551 9 12345678
-    private String telephone; //TELEFONE
+    @Size(max = 13)
+    private String telephone;
 }

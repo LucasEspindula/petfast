@@ -22,6 +22,9 @@ public class Item {
     @Column(nullable = false)
     private Integer amount;
 
+    @Column(nullable = false)
+    private Double valueItems;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idProduct", nullable = false)
     private Product product;

@@ -30,6 +30,9 @@ public class Order {
     @Column(nullable = false)
     private LocalDateTime purchaseDate;
 
+//    @Column(nullable = false)
+//    private Double finalValue;
+
     @OneToMany(cascade = CascadeType.ALL,  mappedBy = "order")
     private List<Item> items = new ArrayList<>();
 }
